@@ -20,7 +20,7 @@ def run_workflow(file_path, claim_id):
     graph.add_node("discharge_agent", discharge_node)
     graph.add_node("bill_agent", bill_node)
 
-    # flow (SEQUENTIAL - SAFE)
+    # SAFE FLOW (no parallel issues)
     graph.set_entry_point("segregator")
 
     graph.add_edge("segregator", "id_agent")
