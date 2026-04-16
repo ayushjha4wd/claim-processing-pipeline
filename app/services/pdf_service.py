@@ -2,7 +2,7 @@ from pdf2image import convert_from_path
 import easyocr
 import numpy as np
 
-reader = easyocr.Reader(['en'])
+reader = easyocr.Reader(['en'], gpu=False)
 
 def extract_pages(pdf_path):
     images = convert_from_path(pdf_path)
